@@ -546,7 +546,7 @@ section { padding: 5.5rem 0; }
   font-size: 1.2rem;
 }
 
-.feature h4 {
+.feature h3 {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--green-dark);

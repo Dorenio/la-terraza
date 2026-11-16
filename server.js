@@ -123,9 +123,11 @@ const server = http.createServer((request, response) => {
         description: 'Restaurante familiar en Otura, Granada, con terraza, salones, cocina mediterránea, zona infantil y celebraciones.',
         url: canonical, telephone: '+34 623 112 264',
         image: `${origin}/assets/portada-restaurante.jpg`,
+        hasMap: 'https://www.google.com/maps/search/?api=1&query=Restaurante+La+Terraza+Carretera+Otura+Dilar+18630',
         address: { '@type': 'PostalAddress', streetAddress: 'Carretera Otura-Dílar s/n', postalCode: '18630', addressLocality: 'Otura', addressRegion: 'Granada', addressCountry: 'ES' },
         geo: { '@type': 'GeoCoordinates', latitude: 37.0891756, longitude: -3.6273285 },
         servesCuisine: ['Cocina mediterránea', 'Pizza'], priceRange: '€€', hasMenu: `${origin}/carta.html`,
+        acceptsReservations: true,
         sameAs: ['https://www.instagram.com/la_terraza_otura/', 'https://www.facebook.com/LATERRAZAOTURA/']
       })}</script>` : '';
       fs.readFile(filePath, 'utf8', (readError, source) => {
