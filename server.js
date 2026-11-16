@@ -24,7 +24,10 @@ const server = http.createServer((request, response) => {
   const requestPath = decodeURIComponent(request.url.split('?')[0]);
   const host = request.headers.host || 'localhost';
   const forwardedProto = (request.headers['x-forwarded-proto'] || '').split(',')[0].trim();
-  const origin = (process.env.SITE_URL || `${forwardedProto || (request.socket.encrypted ? 'https' : 'http')}://${host}`).replace(/\/$/, '');
+  const protocol = process.env.NODE_ENV === 'production'
+    ? 'https'
+    : (forwardedProto || (request.socket.encrypted ? 'https' : 'http'));
+  const origin = (process.env.SITE_URL || `${protocol}://${host}`).replace(/\/$/, '');
   const publicPages = [
     '/', '/nosotros.html', '/carta.html', '/eventos.html', '/cumpleanos-infantiles.html'
   ];

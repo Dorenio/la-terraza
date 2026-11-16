@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://la-terraza-41541a68d1c0.herokuapp.com/sitemap.xml
+Sitemap: https://www.laterrazaotura.com/sitemap.xml
